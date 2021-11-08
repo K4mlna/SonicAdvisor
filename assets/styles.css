@@ -9,7 +9,8 @@
 }
 
 body {
-    font-family: "Trip Sans Med"; 
+    margin:0;
+    font-family: "robotoblack";
 }
 
 aside {
@@ -25,20 +26,22 @@ section {
 h1 {
     font-size:54px;
     font-weight:bold;
+    font-family: "robotoblack";
 }
 
 h2 {
     font-size:28px;
+    font-family: "robotoblack";
 }
 
 h4 {
     font-size:24px;
-    font-family: "Trip Sans Reg"; 
+    font-family: "robotoblack";
 }
 
 h5 {
     font-size:18px;
-    font-family: "Trip Sans Reg"; 
+    font-family: "robotolight"; 
 }
 
 h5:hover {
@@ -54,7 +57,12 @@ img {
 /* ******************************** */
 
 #tripadvisor {
-    width: 190px;
+    width: 240px;
+    height:50;
+}
+
+#tripadvisor:hover {
+    cursor:pointer
 }
 
 #tripadvisor-logo {
@@ -78,7 +86,7 @@ img {
 header > section {
     display: flex;
     justify-content: space-between; /* horizontal */
-    margin-top:0px;
+    margin-top:10px;
 }
 
 /* header => path to section => path to nav */
@@ -106,6 +114,7 @@ header a {
     font-size: 15px;
     padding: 12px 16px;  /* padding : 12px 16px 12px 16px */
     transition: 200ms linear;
+    font-family: "robotomedium";
 }
 
 #sign-in:hover{
@@ -126,6 +135,38 @@ header > section > nav > div:hover{
     transition: 190ms linear;
     border-radius:300px;
     cursor:pointer;
+}
+
+/* added */
+
+header > section > div {
+    display:flex;
+    gap:23px;
+}
+
+header > section > div > input{
+    border-radius: 400px;
+    width:351px;
+    height:44px;
+    padding-left:40px;
+    padding-right:10px;
+    font-size: 20px;
+    outline:none;
+    border: 3px solid rgb(83, 123, 209);
+}
+
+input[type="search"]::-webkit-search-cancel-button {
+    display: none;
+  }
+
+header > section > div > svg{
+    position:absolute;
+    top:19px;
+    margin-left:272px;
+    width:25px;
+    height:25px;
+    background:none;
+    color: rgb(38, 93, 212);
 }
 
 /* ******************************** */
@@ -177,6 +218,14 @@ header > section > nav > div:hover{
     height:430px;
 }
 
+.images div img{
+    transition: 150ms linear;
+}
+
+.images div img:hover{
+    filter: brightness(80%);
+}
+
 .images div:first-child {
     width:60%;
     height:100%;
@@ -202,8 +251,8 @@ header > section > nav > div:hover{
 
 #all-images-button {
     position:absolute;
-    bottom: 35px;
-    left: 150px;
+    top:680px;
+    margin-left:20px;
     display:flex;
     justify-content: center;
     align-items: center;
@@ -211,8 +260,15 @@ header > section > nav > div:hover{
     color:#fff;
     border-radius: 20px;
     font-size:12px;
-    width:120px;
+    width:140px;
     height:30px;
+    transition: 150ms linear;
+}
+
+#all-images-button:hover {
+    background-color:rgb(59, 113, 231);
+    cursor: pointer;
+
 }
 
 #all-images-button p {
@@ -231,7 +287,7 @@ header > section > nav > div:hover{
 .sub-navigation {
     display:flex;
     justify-content: space-between;
-    font-family: "Trip Sans Reg";
+    font-family: "robotolight";
     color:#333;
     font-size:12px;
     margin-top: 5px;
@@ -259,7 +315,7 @@ header > section > nav > div:hover{
 
 .description p {
     color:#333;
-    font-family: "Georgia";
+    font-family: "robotolight";
     font-size:20px;
     line-height:24px;
 }
@@ -322,7 +378,7 @@ header > section > nav > div:hover{
 
 .essential-container p {
     color:#333;
-    font-family: "Georgia";
+    font-family: "robotolight";
     font-size:18px;
     line-height:24px;
 }
@@ -362,12 +418,12 @@ header > section > nav > div:hover{
 
 .essential-reviews {
     font-size:15px;
-    font-family: "Trip Sans Reg";
+    font-family: "robotolight";
 }
 
 .essential-reviews-number {
     font-size:13px;
-    font-family: "Trip Sans Reg";
+    font-family: "robotolight";
 }
 
 /* ******************************** */
@@ -375,7 +431,7 @@ header > section > nav > div:hover{
 /* ******************************** */
 
 .subtitle {
-    font-family: "Trip Sans Reg";
+    font-family: "robotolight";
 }
 
 .dig-into-container {
@@ -471,7 +527,7 @@ footer > section {
 footer p {
     color:#333;
     font-size:12px;
-    font-family: "Trip Sans Reg";
+    font-family: "robotolight";
     margin:0px;
     padding-bottom:6px;
 }
@@ -498,7 +554,7 @@ footer a {
 #more {
     color:#333;
     font-size:12px;
-    font-family:"Trip Sans Reg";
+    font-family:"robotolight";
     text-decoration: none;
 }
 
@@ -517,4 +573,67 @@ footer select {
 
 #currency-and-country {
     margin-top:-40px;
+}
+
+
+/* RESPONSIVE */
+
+/* big screen */
+
+@media only screen and (min-width:1404px){
+
+    header > section{
+        width:1125px;
+    }
+
+    .main-navigation > div:nth-child(6),div:nth-child(7){
+        display:none;
+    }
+
+    .main-navigation > div{
+        flex:0%;
+        height:70px;
+    }
+
+    .description > p{
+        width:700px;
+        
+    }
+
+    .images > div > img:nth-child(n+0){
+        width: 449px;
+    }
+
+    #firstimage{
+        width:671px;
+    }
+
+
+    main{
+        width:1370px;
+        margin-left:auto;
+        margin-right:auto;
+    }
+
+}
+
+@media only screen and (max-width:1404px){
+    #all-images-button{
+        margin-top:70px;
+    }
+}
+
+@media only screen and (max-width:1380px){
+
+    #sign-in{
+        height:43px;
+        width:140px;
+    }
+}
+
+@media only screen and (max-width:1350px){
+    
+    header > section > div > input{
+        width:100%;
+    }
 }
