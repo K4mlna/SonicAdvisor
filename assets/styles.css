@@ -465,6 +465,11 @@ main > section:first-child > h1 {
 /* main: dig into */
 /* ******************************** */
 
+aside > section {
+    margin-left:auto;
+    margin-right:auto;
+}
+
 .subtitle {
     font-family: "robotolight";
 }
@@ -490,7 +495,7 @@ main > section:first-child > h1 {
 }
 
 .dig-into-cell {
-    width: 366px;
+    width: 429px;
     height: 363px;
     background-color:#fff;
     text-align:center;
@@ -500,6 +505,11 @@ main > section:first-child > h1 {
     height: 232px;
     background-position: center; 
     background-size:cover;
+}
+
+.imagediginto{
+    height:232px;
+    object-fit: cover;
 }
 
 #dig-into-image-01 {
@@ -611,6 +621,62 @@ footer select {
 }
 
 
+
+
+/* carousel */
+
+.carouselincontournables{
+display:flex;
+gap:10px;
+}
+
+.carousel-control-prev, .carousel-control-next{
+    margin-bottom:60px;
+}
+
+#carousel1{
+    width:100%;
+    right:0px;
+}
+
+#carousel2{
+    width:100%;
+    right:0px;
+}
+
+#carousel3{
+    width:100%;
+    right:0px;
+}
+
+.prev2,.next2{
+    position:absolute;
+    top:91px;
+    margin-left:10px;
+    border-radius:100%;
+    border:none;
+    padding:20px;
+    z-index: 10;
+    outline:none;
+    transition:180ms linear;
+    background-color:white ;
+    color:rgb(4, 73, 223);
+}
+
+.prev2:hover,.next2:hover{
+    background-color:rgb(4, 73, 223);
+    color:white;
+}
+
+.carouselincontournables > div > div > img{
+    width:320px;
+    object-fit:cover;
+}
+
+
+
+
+
 /* RESPONSIVE */
 
 /* big screen */
@@ -652,11 +718,21 @@ footer select {
         width:100%
     }
 
+    aside > section{
+        margin-left:auto;
+        margin-right:auto;
+        max-width:1300px;
+    }
 }
 
 @media only screen and (max-width:1586px){
     header > section{
         width:83%;
+    }
+
+    .carouselincontournables > div > div > img{
+        width:100%;
+        object-fit:cover;
     }
 }
 
