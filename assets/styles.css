@@ -40,8 +40,8 @@ h4 {
 }
 
 h5 {
-    font-size:18px;
-    font-family: "robotolight"; 
+    font-size:13px;
+    font-family: "robotoblack"; 
 }
 
 h5:hover {
@@ -87,9 +87,14 @@ header > section {
     display: flex;
     justify-content: space-between; /* horizontal */
     margin-top:10px;
+    
 }
 
 /* header => path to section => path to nav */
+
+header{
+    width:100%;
+}
 header > section > nav {
     display: flex;
 }
@@ -168,6 +173,19 @@ header > section > div > svg{
     background:none;
     color: rgb(38, 93, 212);
 }
+/* ******************************** */
+/* main */
+/* ******************************** */
+
+main > section:first-child {
+    margin-top:40px;
+    font-family: "robotoblack";
+}
+
+main > section:first-child > h1 {
+    font-size:60px;
+    margin-bottom:30px;
+}
 
 /* ******************************** */
 /* main: h1 explore */
@@ -204,6 +222,10 @@ header > section > div > svg{
     background-color:rgb(4, 73, 223);
     cursor:pointer;
     color:white;
+}
+
+.main-navigation > div > p{
+    padding-top:14px;
 }
 
 /* ******************************** */
@@ -251,11 +273,12 @@ header > section > div > svg{
 
 #all-images-button {
     position:absolute;
-    top:740px;
-    margin-left:20px;
+    align-content: center;
+    bottom:23px;
+    left:14px;
     display:flex;
     justify-content: center;
-    align-items: center;
+    padding-top:5px;
     background-color:rgb(4, 73, 223);
     color:#fff;
     border-radius: 20px;
@@ -263,6 +286,10 @@ header > section > div > svg{
     width:140px;
     height:30px;
     transition: 150ms linear;
+}
+
+.images div{
+    position:relative
 }
 
 #all-images-button:hover {
@@ -303,6 +330,7 @@ header > section > div > svg{
 
 .sub-navigation .icon {
     margin-left:4px;
+    margin-bottom:20px;
 }
 
 /* ******************************** */
@@ -324,6 +352,10 @@ header > section > div > svg{
 /* ******************************** */
 /* main: travel advice */
 /* ******************************** */
+
+.travel-advice {
+    font-family: "robotoblack";
+}
 
 .travel-advice-container > div {
     display:flex;
@@ -356,6 +388,7 @@ header > section > div > svg{
 
 .travel-advice > div > p {
     font-size:16px;
+    padding-top:13px;
 }
 
 /* ******************************** */
@@ -396,6 +429,8 @@ header > section > div > svg{
 .essential-reviews, .essential-reviews-number, .essential h5 {
     margin: 2px 0px;
 }
+
+
 
 /* .essential-container .essential > div {margin-right:15px} */
 /* .essential-container .essential > div:last-child {margin-right:0px}*/
@@ -582,8 +617,11 @@ footer select {
 
 @media only screen and (min-width:1404px){
 
-    header > section{
-        width:1125px;
+
+
+    header > section {
+        width:1300px;
+
     }
 
     .description > p{
@@ -592,20 +630,34 @@ footer select {
     }
 
     .images > div > img:nth-child(n+0){
-        width: 449px;
+        width: 100%
     }
 
     #firstimage{
-        width:671px;
+        width:100%
     }
 
 
     main{
-        width:1370px;
-        margin-left:auto;
-        margin-right:auto;
+        width:100%;
     }
 
+    main > section {
+        margin-left:auto;
+        margin-right:auto;
+        max-width:1300px;
+    }
+
+    aside{
+        width:100%
+    }
+
+}
+
+@media only screen and (max-width:1586px){
+    header > section{
+        width:83%;
+    }
 }
 
 @media only screen and (max-width:1380px){
@@ -620,26 +672,5 @@ footer select {
     
     header > section > div > input{
         width:100%;
-    }
-}
-
-@media only screen and (max-width:1056px){
-    
-    #all-images-button{
-        margin-top:20px;
-    }
-}
-
-@media only screen and (max-width:985px){
-    
-    #all-images-button{
-        margin-top:35px;
-    }
-}
-
-@media only screen and (max-width:697px){
-    
-    #all-images-button{
-        margin-top:115px;
     }
 }
