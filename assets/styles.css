@@ -251,7 +251,7 @@ header > section > div > svg{
 
 #all-images-button {
     position:absolute;
-    top:680px;
+    top:740px;
     margin-left:20px;
     display:flex;
     justify-content: center;
@@ -586,15 +586,6 @@ footer select {
         width:1125px;
     }
 
-    .main-navigation > div:nth-child(6),div:nth-child(7){
-        display:none;
-    }
-
-    .main-navigation > div{
-        flex:0%;
-        height:70px;
-    }
-
     .description > p{
         width:700px;
         
@@ -617,17 +608,11 @@ footer select {
 
 }
 
-@media only screen and (max-width:1404px){
-    #all-images-button{
-        margin-top:70px;
-    }
-}
-
 @media only screen and (max-width:1380px){
 
     #sign-in{
         height:43px;
-        width:140px;
+        width:143px;
     }
 }
 
@@ -635,5 +620,26 @@ footer select {
     
     header > section > div > input{
         width:100%;
+    }
+}
+
+@media only screen and (max-width:1056px){
+    
+    #all-images-button{
+        margin-top:20px;
+    }
+}
+
+@media only screen and (max-width:985px){
+    
+    #all-images-button{
+        margin-top:35px;
+    }
+}
+
+@media only screen and (max-width:697px){
+    
+    #all-images-button{
+        margin-top:115px;
     }
 }
