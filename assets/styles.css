@@ -46,10 +46,17 @@ h5 {
 
 h5:hover {
     text-decoration: underline;
+    cursor: pointer;
 }
 
 img {
     width:100%;
+    transition: 150ms;
+}
+
+img:hover{
+    filter:brightness(90%);
+    cursor:pointer;
 }
 
 /* ******************************** */
@@ -61,12 +68,18 @@ img {
     height:50;
 }
 
+
 #tripadvisor:hover {
-    cursor:pointer
+    cursor:pointer;
+    filter:brightness(100%);
 }
 
 #tripadvisor-logo {
     width: 40px;
+}
+
+#tripadvisor-logo {
+    filter:brightness(100%)
 }
 
 
@@ -264,6 +277,9 @@ main > section:first-child > h1 {
 .images div:last-child {
     width:40%;
     height:100%;
+    display:flex;
+    flex-direction: column;
+    gap:3px;
 }
 
 .images div:last-child img {
@@ -293,6 +309,7 @@ main > section:first-child > h1 {
     position:relative
 }
 
+
 #all-images-button:hover {
     background-color:rgb(59, 113, 231);
     cursor: pointer;
@@ -300,8 +317,11 @@ main > section:first-child > h1 {
 }
 
 #all-images-button p {
-    margin-left:3px;
+    margin-top:9px;
+    text-align: center;
+    font-size:14px;
 }
+
 
 /* ******************************** */
 /* main: sub-navigation */
@@ -379,9 +399,7 @@ main > section:first-child > h1 {
     cursor:pointer;
 }
 
-.travel-advice > div:last-child {
-    margin-right:0px;
-}
+
 
 .travel-advice > div:hover {
     background-color: rgba(211, 211, 211, 0.3);
@@ -622,14 +640,6 @@ footer select {
 }
 
 
-/* sticky main nav */
-
-
-
-
-
-
-
 /* carousel */
 
 .carouselincontournables{
@@ -679,6 +689,11 @@ gap:10px;
 #carousel4 > div > div > div > div{
     height:500px;
     width:100%
+}
+
+
+#mainnavcarousel{
+    display:none;
 }
 
 
@@ -828,4 +843,288 @@ gap:10px;
 /* nav responsive */
 
 
+@media only screen and (max-width:903px){
+
+    main > section > h1 {
+        margin-left:34px;
+    }
+
+    main > section > h1 > span{
+        font-size:40px;
+    }
+
+    main > section{
+        width:100%
+    }
+    .main-navigation{
+    display:none
+    }   
+
+    #mainnavcarousel {
+    display:block;
+    height:auto;
+    width:100%;
+    margin-left:auto;
+    margin-right:auto;
+
+    }
+
+    
+    #mainnavcarousel div > div > div {
+        margin-left:16px;
+        margin-right:auto;
+        width:93%;
+        display:flex;
+        justify-content: space-between;
+    }
+    #mainnavcarousel div > div > div > div{
+
+        border: 1px solid black;
+        align-items: center;
+        display:flex;
+        border-radius: 10px;
+        padding: 0.2px 16px;
+        
+    }
+    #mainnavcarousel div > div > div > div > p{
+        margin-top:13px;
+        
+    }
+
+    #mainnavcarousel > a > div{
+        background-color: rgba(0, 41, 226, 0.15);
+        padding:15px;
+        padding-left:20px;
+        padding-right:20px;
+    }
+
+    #mainnavcarousel > a > div:hover{
+        color:rgb(0, 0, 0);
+    }
+
+    #mainnavcarousel > a > .prev2{
+        position:absolute;
+        top:0px;
+        left:0px;
+    }
+
+    #mainnavcarousel > a > .next2{
+        top:0px;
+        right:10px;
+    }
+    
+
+}
+
+@media only screen and (max-width:723px){
+    #mainnavcarousel > a > .prev2{
+        position:absolute;
+        top:10px;
+    }
+    #mainnavcarousel > a > .next2{
+        position:absolute;
+        top:10px;
+    }
+    #mainnavcarousel div > div > div > div{
+        height:76.975px;
+    }
+}
+
+
+
+/* under nav responsive */
+
+@media only screen and (max-width:903px){
+ .images > div:last-child{
+     display:none;
+ } 
+ .images > div:first-child{
+    width:100%;
+    height:300px;
+    }
+
+  .sub-navigation{display:none;}
+  
+  .description{
+    padding-left:30px;
+    width:98%;
+    }
+}
+@media only screen and (max-width:1235px){
+    .images > div:first-child{
+       height:300px;
+    }
+    .images > div:last-child{
+        height:300px;
+     }
+
+    .images {
+        height:auto;
+    }
+    
+    
+}
+
+/* astuces de voyage responsive */
+@media only screen and (max-width:1136px){
+
+    .travel-advice{
+        flex-wrap:wrap;
+    }
+
+    .travel-advice > div {
+        margin-bottom:10px;
+    }
+    
+}
+@media only screen and (max-width:903px){
+    .section-spacing{
+        padding-left:30px;
+    }
+
+    
+}
+
+/* carousel responsive */
+
+@media only screen and (min-width:903px){
+    .essential-container > div > h4, .essential-container > div > p{
+        word-break: keep-all;
+    }
+}
+
+@media only screen and (max-width:1085px){
+    #carousel4 > div > div > div > div:first-child{
+        display:none;
+    }
+}
+@media only screen and (max-width:903px){
+.carouselincontournables > div:last-child{
+    display:none;
+}
+
+.essential-container > div:last-child {
+    width:100%;
+}
+.essential-container{
+    display:flex;
+    flex-direction: column;
+}
+
+.essential-container > div:first-child{
+    width:100%
+}
+
+.essential-container .essential{
+    display:inline;
+}
+
+}
+
+/* discover green hill responsive and transformation into carousel*/
+@media only screen and (max-width:700px){
+    .dig-into-container{
+        display:none;
+    }
+
+    #carouseldiscover{
+        display:block;
+    }
+
+    .dig-into-cell{
+        width:100%
+    }
+
+    aside > section{
+        width:100%;
+        padding-left:30px;
+    }
+
+
+
+}
+
+@media only screen and (min-width:700px){
+    #carouseldiscover{
+        display:none;
+    }
+}
+
+@media only screen and (max-width:1025px){
+    aside > section > div > div > div:last-child{
+        display:none;
+    }
+
+    #carouseldiscover> a{
+        margin-top:15px;
+    }
+}
+
+@media only screen and (max-width:903px){
+    aside > section{
+        width:100%;
+        padding-left:30px;
+    }
+    .underline{
+        color:black;
+    }
+    .dig-into-link-main{
+        color:black;
+    }
+
+}
+
+/* footer responsive */
+@media only screen and (min-width:903px){
+     .copyright-and-link > div:nth-child(1) {
+        display:none;
+    }
+
+    
+    
+}
+@media only screen and (max-width:903px){
+
+    footer > section{
+        width:100%;
+    }
+
+    footer > section > div:last-child{
+        display:none;
+    }
+
+    footer > section > div{
+        width:100%;
+
+    }   
+
+    footer > div:first-child {
+        display:block;
+    }
+
+    .copyright-and-link{
+        margin-top:60px;
+    }
+
+    #currency-and-country > select {
+        width:500px;
+        right:500px;
+    }
+    #currency-and-country{
+        gap:10px;
+        position: absolute;
+        width:90%;
+        left:30px;
+    }
+
+    .flex > div > div > div:first-child{
+        margin-top:60px;
+        padding-left:30px;
+    }
+
+    #notice{
+        padding-left:30px;
+    }
+    
+}
 
