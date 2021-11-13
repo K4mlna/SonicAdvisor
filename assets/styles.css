@@ -494,7 +494,8 @@ aside > section {
 }
 
 .dig-into-container {
-    display:flex;
+    
+    display: flex;
 }
 
 .dig-into-container > div:not(:last-child) {
@@ -524,6 +525,8 @@ aside > section {
     height: 232px;
     background-position: center; 
     background-size:cover;
+    display:flex;
+    justify-content: flex-end;
 }
 
 .imagediginto{
@@ -1128,3 +1131,33 @@ gap:10px;
     
 }
 
+/* and finally the hearts */
+
+.heart{
+    position: absolute;
+    padding:10px;
+    width:50px;
+    height: 50px;
+    background-color: white;
+    z-index: 10000;
+    border-radius: 1000px;   
+    transition: 300ms;
+    margin-top:10px;
+    margin-right:10px; 
+}
+
+.heartgap{
+    position:absolute;
+    margin-right:60px;
+    
+}
+
+.heart:hover{
+    background-color: rgba(255, 255, 255, 0.726);
+    cursor:pointer;
+}
+
+.box {
+    display: flex;
+    justify-content:end;
+}
